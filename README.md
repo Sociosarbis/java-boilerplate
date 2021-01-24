@@ -16,6 +16,12 @@ The workspace contains two folders by default, where:
 
 The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
 
+### download dependencies
+```powershell
+invoke-restmethod "https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" -outfile "lib/hamcrest-core-1.3.jar"
+invoke-restmethod "https://repo1.maven.org/maven2/junit/junit/4.12/junit-4.12.jar" -outfile "lib/junit-4.12.jar"
+```
+
 ## How to run a specific unit test from command line
 ```bash
 rm src/[package name]/*.class
