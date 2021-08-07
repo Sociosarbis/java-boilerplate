@@ -3,6 +3,7 @@ package getImportance;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -23,7 +24,7 @@ public class Tests {
   public void testResults() {
     Suite[] suites = {
       new Suite(Arrays.asList(new Employee(1, 5, Arrays.asList(2, 3)), new Employee(2, 3, Arrays.asList()),new Employee(3, 3, Arrays.asList())), 1, 11)
-    }
+    };
 
     Solution s = new Solution();
     for (Suite su: suites) {
