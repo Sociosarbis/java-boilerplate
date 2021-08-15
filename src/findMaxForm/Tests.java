@@ -21,7 +21,7 @@ public class Tests {
   @Test
   public void testResults() {
     Suite[] suites = new Suite[]{
-      /*new Suite(
+      new Suite(
         new String[]{ "10","0001","111001","1","0" },
         5,
         3,
@@ -32,13 +32,13 @@ public class Tests {
         1,
         1,
         2
-      ),*/
-      /*new Suite(
+      ),
+      new Suite(
         new String[]{ "10","0001","111001","1","0"},
         4,
         3,
         3
-      ),*/
+      ),
       new Suite(
         new String[]{"10","1","0"},
         1,
