@@ -2,6 +2,7 @@ package KthLargest;
 
 import java.util.List;
 import java.util.LinkedList;
+import utils.Utils;
 
 public class KthLargest {
   List<Integer> nums;
@@ -28,28 +29,6 @@ public class KthLargest {
   }
 
   int binarySearch(int target, boolean isInsert) {
-    if (nums.isEmpty()) {
-      return isInsert ? 0 : -1;
-    }
-
-    int l = nums.size() - k;
-    int r = nums.size() - 1;
-    while (l <= r) {
-      int mid  = (l + r) / 2;
-      if (nums.get(mid) < target) {
-        l = mid + 1;
-        if (l > r) {
-          return isInsert ? l : -1;
-        }
-      } else if (nums.get(mid) > target) {
-        if (mid == 0 || mid - 1 < l) {
-          return isInsert ? mid : -1;
-        }
-        r = mid - 1;
-      } else {
-        return mid;
-      }
-    }
-    return 0;
+    return Utils.binarySearch(nums, target, isInsert);
   }
 }
