@@ -24,6 +24,7 @@ class Solution {
                 if (j < blacklist.length) {
                     if (blacklist[j] <= i) {
                         j++;
+                        i++;
                         continue;
                     }
                 }
@@ -45,7 +46,7 @@ class Solution {
             int num;
             do {
                 num = numGenerator.nextInt(n);
-            } while (!optionSet.contains(num));
+            } while (optionSet.contains(num));
             return num;
         } else {
             return optionList.get(numGenerator.nextInt(optionList.size()));
